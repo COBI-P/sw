@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COBI | 올인원 바이럴 마케팅 포트폴리오</title>
+    
+    <!-- 📌 [오픈그래프] 카카오톡/링크드인 링크 공유 시 나타나는 미리보기 카드 -->
+    <meta property="og:title" content="COBI | 매출을 견인하는 올인원 바이럴 마케터">
+    <meta property="og:description" content="네이버, 메타, 당근마켓, 카카오를 아우르는 트렌디한 바이럴 솔루션.">
+    <meta property="og:image" content="https://cobi-p.github.io/images/og-image.png">
+    <meta property="og:url" content="https://cobi-p.github.io">
+
+    <!-- 📌 [디자인] Tailwind CSS 테마 설정 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#fcfcfd',        /* 전체 배경색 */
+                            card: '#ffffff',      /* 카드 컴포넌트 배경색 */
+                            primary: '#111111',   /* 메인 강조 글자색 */
+                            secondary: '#555562', /* 본문 및 설명 글자색 */
+                            accent: '#3162ff',    /* 포인트 컬러 1 (일렉트릭 블루) */
+                            purple: '#7000ff',    /* 포인트 컬러 2 (세련된 퍼플) */
+                            border: '#eef1f6'     /* 경계선 및 테두리 색상 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 📌 [라이브러리] 폰트, 애니메이션, 아이콘 CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #fcfcfd;
+            color: #111111;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #3162ff 0%, #7000ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .premium-shadow {
+            box-shadow: 0 8px 30px rgb(0, 0, 0, 0.02);
+        }
+        .premium-shadow-hover:hover {
+            box-shadow: 0 20px 40px rgba(49, 98, 255, 0.08);
+            border-color: rgba(49, 98, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+    <!-- 📌 네비게이션 헤더 -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-brand-border/80 py-5 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-black tracking-tighter text-brand-primary uppercase">
+                COBI<span class="text-brand-accent">.</span>LAB
+            </a>
+            <nav class="hidden md:flex gap-10 text-xs font-bold uppercase tracking-widest text-brand-secondary">
+                <a href="#philosophy" class="hover:text-brand-accent transition-colors">Philosophy</a>
+                <a href="#channels" class="hover:text-brand-accent transition-colors">Channels</a>
+                <a href="#campaigns" class="hover:text-brand-accent transition-colors">Campaigns</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-accent text-white px-5 py-2.5 rounded-xl text-xs font-bold tracking-wider transition-all duration-300 transform hover:-translate-y-0.5">
+                프로젝트 의뢰
+            </a>
+        </div>
+    </header>
+
+    <!-- 📌 1. 메인 대문 (Hero 섹션) -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 relative border-b border-brand-border">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-accent/5 rounded-full blur-[120px]"></div>
+        </div>
+        <div class="text-center z-10 max-w-5xl" data-aos="fade-up" data-aos-duration="1200">
+            <span class="text-xs uppercase tracking-[0.4em] text-brand-accent font-black block mb-6">Omni-Channel Viral Marketer</span>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-brand-primary leading-[1.1] mb-10">
+                매체는 수단일 뿐,<br><span class="text-gradient">본질은 매출 전환입니다</span>
+            </h1>
+            <p class="text-brand-secondary text-base md:text-xl max-w-3xl mx-auto font-normal leading-relaxed">
+                단순 노출형 광고에 예산을 낭비하지 않습니다. 네이버 로컬 트래픽 설계부터 메타 고효율 타겟팅까지, 소비자의 구매 여정 전체를 장악하는 선명한 바이럴 솔루션을 제안합니다.
+            </p>
+            <div class="mt-14 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#campaigns" class="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-accent text-white px-8 h-14 rounded-xl font-bold tracking-wide transition-all duration-300 shadow-md">
+                    성공 사례 보기
+                </a>
+                <a href="#channels" class="inline-flex items-center justify-center bg-white text-brand-primary border border-brand-border hover:bg-brand-border/40 px-8 h-14 rounded-xl font-bold tracking-wide transition-all duration-300">
+                    운영 매체 스펙
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 2. 마케팅 철학 (About Me) 섹션 -->
+    <section id="philosophy" class="py-32 px-6 max-w-7xl mx-auto scroll-mt-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+            <div data-aos="fade-right">
+                <span class="text-xs uppercase tracking-widest text-brand-accent font-black">Core Strength</span>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-brand-primary uppercase mt-3 mb-6">About Me</h2>
+                <div class="w-16 h-[3px] bg-brand-accent"></div>
+            </div>
+            <div class="lg:col-span-2 space-y-8 text-brand-secondary text-base md:text-lg font-normal leading-relaxed" data-aos="fade-left">
+                <p>
+                    안녕하세요, 타겟의 행동 패턴을 분석해 가장 유효한 채널에 메시지를 침투시키는 마케터 <strong class="text-brand-primary font-bold">이승우</strong>입니다. 
+                    단순한 대행사식 기계적 세팅을 넘어, 브랜드의 업종과 위치, 주요 타겟군에 유연하게 대응하는 <span class="text-brand-primary font-bold border-b-2 border-brand-accent/30 pb-0.5">정교한 채널 믹스 전략</span>을 실행합니다.
+                </p>
+                <p>
+                    골목 상권 소상공인을 위한 네이버 플레이스 및 당근마켓 지역 최적화부터, 전국 단위 확산을 위한 인스타그램/페이스북 퍼포먼스 광고 및 카카오 채널 기반의 단골 락인(Lock-in) 마케팅까지 전 과정을 직접 설계하고 지표로 증명해 왔습니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 3. 핵심 운영 매체 (Core Channels) 구역 (6개 전체 모달 연동 완료) -->
+    <section id="channels" class="py-32 bg-white border-y border-brand-border px-6 scroll-mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 text-center" data-aos="fade-up">
+                <span class="text-xs uppercase tracking-widest text-brand-accent font-black">Our Playgrounds</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brand-primary mt-3 mb-4">Core Channels</h2>
+                <p class="text-brand-secondary text-sm md:text-base max-w-md mx-auto">기획부터 광고 집행, 최적화까지 완벽 제어 가능한 마케팅 빌드업 매체입니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 📌 [카드 1] 네이버 비즈니스 팩 -->
+                <div id="naver-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-lg mb-6 font-black">N</div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">네이버 비즈니스 팩</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 지역 기반 스마트플레이스 최적화</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 타겟 맞춤 검색광고 & 파워링크 설계</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 카페·블로그 타겟 침투형 바이럴</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 📌 [카드 2] 인스타그램 마케팅 -->
+                <div id="insta-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-lg mb-6"><i class="fa-brands fa-instagram"></i></div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">인스타그램 마케팅</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 브랜드 오피셜 계정 비주얼 세팅</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 릴스 중심 크리에이티브 콘텐츠 기획</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 스폰서드 스토리/피드 광고 최적화</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 📌 [카드 3] 페이스북 퍼포먼스 -->
+                <div id="fb-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-6"><i class="fa-brands fa-facebook-f"></i></div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">페이스북 광고 퍼포먼스</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 메타 비즈니스 관리자 및 픽셀 세팅</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 고효율 맞춤 타겟 및 유사 타겟 추출</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> ROAS 극대화를 위한 소재 A/B 테스트</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 📌 [카드 4] 당근마켓 하이퍼로컬 -->
+                <div id="daangn-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-carrot"></i></div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">당근마켓 하이퍼로컬</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 전문가모드 광고주 센터 커스텀 빌드</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 동네 지점별 정교한 타겟 피딩 광고</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 비즈프로필 연계 단골 유입 가속화</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 📌 [카드 5] 카카오 비즈니스 CRM -->
+                <div id="kakao-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="500">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-comment"></i></div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">카카오 비즈니스 CRM</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 카카오톡 채널 개설 및 웰컴 메시지 설계</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 타겟 리스트 기반 푸시 메시지 광고</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 모먼트 광고 연동 핵심 오디언스 확보</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+                <!-- 📌 [카드 6] 성과 데이터 통합 관리 -->
+                <div id="data-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="600">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="text-xl font-bold text-brand-primary mb-4">성과 데이터 통합 관리</h3>
+                        <ul class="space-y-3 text-brand-secondary text-sm font-normal mb-6">
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> UTM 파라미터 링크 설계 및 추적</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 매체별 획득 비용(CAC) 통합 트래킹</li>
+                            <li><i class="fa-solid fa-circle-check text-brand-accent text-xs mr-2"></i> 실제 구매 전환율(CVR) 분석 및 개선</li>
+                        </ul>
+                    </div>
+                    <div class="text-xs font-bold text-brand-accent flex items-center gap-1 group-hover:underline">
+                        상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 4. 캠페인 리포트 (Featured Campaigns) 섹션 -->
+    <section id="campaigns" class="py-32 px-6 max-w-7xl mx-auto scroll-mt-20">
+        <div class="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end" data-aos="fade-up">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-brand-accent font-black">Proven Results</span>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-brand-primary mt-3">Featured Campaigns</h2>
+            </div>
+            <p class="text-brand-secondary text-sm max-w-xs mt-4 md:mt-0">제시된 핵심 매체 믹스를 통해 비즈니스 성장을 이끌어낸 실전 성공 사례입니다.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="group bg-brand-card border border-brand-border rounded-2xl overflow-hidden premium-shadow hover:border-brand-accent/30 transition-all duration-300" data-aos="fade-up">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] tracking-widest uppercase font-bold text-brand-secondary">Naver Multi-Viral</span>
+                        <span class="text-xs font-bold text-brand-accent bg-brand-accent/5 px-3 py-1 rounded-full">플레이스 1위 달성</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-primary mb-4 group-hover:text-brand-accent transition-colors">F&B 프랜차이즈 고효율 네이버 올인원 팩 캠페인</h3>
+                    <p class="text-brand-secondary font-light text-sm mb-6 leading-relaxed">
+                        스마트플레이스 최적화 세팅 후 파워링크 및 검색광고 키워드 고도화를 거쳐, 대형 지역 맘카페 및 블로그 네이티브 바이럴을 침투시켜 매장 예약률을 폭발적으로 증가시켰습니다.
+                    </p>
+                    <div class="border-t border-brand-border pt-6 flex justify-between items-center text-xs text-brand-secondary">
+                        <div><strong>Channels:</strong> 플레이스, 파워링크, 카페, 블로그</div>
+                        <a href="#" class="text-brand-primary hover:text-brand-accent font-bold flex items-center gap-1 transition-colors">Case Study <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group bg-brand-card border border-brand-border rounded-2xl overflow-hidden premium-shadow hover:border-brand-accent/30 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] tracking-widest uppercase font-bold text-brand-secondary">Meta Paid Ads</span>
+                        <span class="text-xs font-bold text-brand-accent bg-brand-accent/5 px-3 py-1 rounded-full">ROAS 420% 달성</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-primary mb-4 group-hover:text-brand-accent transition-colors">이커머스 브랜드 Meta 타겟팅 스케일업 캠페인</h3>
+                    <p class="text-brand-secondary font-light text-sm mb-6 leading-relaxed">
+                        인스타그램 릴스 숏폼 트렌드 카피를 기반으로 비즈니스 관리자 세팅을 완료, 정교한 관심사 및 맞춤 타겟 오디언스를 설계하여 CPA 단가를 절반으로 줄이며 매출 성장을 기록했습니다.
+                    </p>
+                    <div class="border-t border-brand-border pt-6 flex justify-between items-center text-xs text-brand-secondary">
+                        <div><strong>Channels:</strong> 인스타그램, 페이스북, Meta Ads</div>
+                        <a href="#" class="text-brand-primary hover:text-brand-accent font-bold flex items-center gap-1 transition-colors">Case Study <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 5. 문의하기 (Contact) 섹션 -->
+    <section id="contact" class="py-32 bg-white border-t border-brand-border px-6 scroll-mt-20">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div data-aos="fade-up">
+                <span class="text-xs uppercase tracking-widest text-brand-accent font-black block mb-4">Let's Connect</span>
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-brand-primary mb-6">성장을 시작할 시간입니다.</h2>
+                <p class="text-brand-secondary text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed mb-12">
+                    제시해주신 매체 인프라를 바탕으로 브랜드 맞춤형 그로스 시나리오를 설계해 드립니다. 지금 바로 협업을 제안해 보세요.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 text-sm mb-16">
+                    <a href="mailto:cobi.marketer@gmail.com" class="inline-flex items-center justify-center gap-3 bg-brand-primary hover:bg-brand-accent text-white px-6 h-14 rounded-xl transition-all duration-300 shadow-md">
+                        <i class="fa-regular fa-envelope text-white text-base"></i>
+                        <span>cobi.marketer@gmail.com</span>
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center gap-3 bg-white border border-brand-border hover:bg-brand-border text-brand-primary px-6 h-14 rounded-xl transition-all duration-300">
+                        <i class="fa-brands fa-linkedin-in text-brand-accent text-base"></i>
+                        <span>LinkedIn 프로필</span>
+                    </a>
+                </div>
+                <p class="text-zinc-400 text-xs">© 2026 COBI_LAB. All rights reserved. Powered by High-End Marketing Strategy.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 📌 ===================================================
+         [모달 레이어 집합] 평소에는 hidden 상태로 대기합니다.
+         =================================================== -->
+
+    <!-- 📌 1. 네이버 비즈니스 팩 모달 -->
+    <div id="naver-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-green-50 text-green-600 flex items-center justify-center text-sm font-black">N</div><h4 class="text-lg font-bold text-brand-primary">네이버 비즈니스 상세 성과</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">플레이스 지표</div><div class="text-sm sm:text-base font-black text-brand-accent">메인 키워드 1위</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">총 내방 예약률</div><div class="text-sm sm:text-base font-black text-gradient">+185% 상승</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">광고 집행 단가</div><div class="text-sm sm:text-base font-black text-brand-primary">CPC 22% 절감</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">실제 성과 증빙 데이터</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/naver-place-result.png" alt="네이버 플레이스 성과" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/naver-ads-result.png" alt="네이버 광고 리포트" class="w-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 2. 인스타그램 마케팅 모달 -->
+    <div id="insta-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center text-sm"><i class="fa-brands fa-instagram"></i></div><h4 class="text-lg font-bold text-brand-primary">인스타그램 바이럴 성과</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">숏폼 콘텐츠</div><div class="text-sm sm:text-base font-black text-brand-accent">누적 500만 뷰</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">오가닉 팔로워</div><div class="text-sm sm:text-base font-black text-gradient">+12,000 명</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">스폰서드 광고</div><div class="text-sm sm:text-base font-black text-brand-primary">CTR 4.5% 달성</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">인스타그램 크리에이티브 피드</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/instagram-reels-result.png" alt="인스타그램 릴스 성과" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/instagram-ads-dashboard.png" alt="인스타 광고 관리자" class="w-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 3. 페이스북 광고 퍼포먼스 모달 -->
+    <div id="fb-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-sm"><i class="fa-brands fa-facebook-f"></i></div><h4 class="text-lg font-bold text-brand-primary">페이스북 퍼포먼스 성과</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">평균 ROAS</div><div class="text-sm sm:text-base font-black text-brand-accent">최대 420% 마감</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">획득 비용(CPA)</div><div class="text-sm sm:text-base font-black text-gradient">35% 대폭 절감</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">픽셀 맞춤타겟</div><div class="text-sm sm:text-base font-black text-brand-primary">모수 5만 확보</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">메타 비즈니스 관리자 지표</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/facebook-ads-result.png" alt="페이스북 성과 리포트" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/facebook-pixel-data.png" alt="메타 픽셀 데이터" class="w-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 4. 당근마켓 하이퍼로컬 모달 -->
+    <div id="daangn-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center text-sm"><i class="fa-solid fa-carrot"></i></div><h4 class="text-lg font-bold text-brand-primary">당근마켓 로컬 광고 성과</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">비즈프로필 단골</div><div class="text-sm sm:text-base font-black text-brand-accent">3배 이상 증가</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">쿠폰 회수율</div><div class="text-sm sm:text-base font-black text-gradient">평균 14.8% 달성</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">지역 타겟 피딩</div><div class="text-sm sm:text-base font-black text-brand-primary">반경 3km 정밀화</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">당근마켓 광고주 센터 증빙</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/daangn-expert-ads.png" alt="당근마켓 전문가모드" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/daangn-profile-result.png" alt="비즈프로필 데이터" class="w-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 5. 카카오 비즈니스 CRM 모달 -->
+    <div id="kakao-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-yellow-50 text-yellow-600 flex items-center justify-center text-sm"><i class="fa-solid fa-comment"></i></div><h4 class="text-lg font-bold text-brand-primary">카카오 비즈니스 CRM 성과</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">메시지 오픈율</div><div class="text-sm sm:text-base font-black text-brand-accent">평균 68% 기록</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">카톡 채널 친구</div><div class="text-sm sm:text-base font-black text-gradient">오가닉 5,500명</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">재구매 유도율</div><div class="text-sm sm:text-base font-black text-brand-primary">LTV 55% 부스팅</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">카카오 모먼트 및 채널 센터 리포트</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/kakao-channel-dashboard.png" alt="카카오 비즈니스 채널" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/kakao-moment-ads.png" alt="카카오 모먼트 광고" class="w-full h-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 📌 6. 성과 데이터 통합 관리 모달 -->
+    <div id="data-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
+            <div class="p-6 border-b border-brand-border flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-10">
+                <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-purple-50 text-brand-purple flex items-center justify-center text-sm"><i class="fa-solid fa-chart-pie"></i></div><h4 class="text-lg font-bold text-brand-primary">성과 데이터 추적 및 관리 지표</h4></div>
+                <button class="w-8 h-8 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-zinc-500 hover:text-brand-primary modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-8 space-y-6">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">데이터 정합성</div><div class="text-sm sm:text-base font-black text-brand-accent">UTM 설계 100%</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">고객 전환 분석</div><div class="text-sm sm:text-base font-black text-gradient">퍼널 이탈점 24% 개선</div></div>
+                    <div class="bg-brand-bg p-4 rounded-xl border border-brand-border"><div class="text-[11px] text-brand-secondary font-medium mb-1">대시보드 믹스</div><div class="text-sm sm:text-base font-black text-brand-primary">루커스튜디오 시각화</div></div>
+                </div>
+                <div class="space-y-2">
+                    <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">GA4 및 데이터 대시보드 리포팅 증빙</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/ga4-funnel-report.png" alt="GA4 퍼널 분석 리포트" class="w-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/looker-studio-dashboard.png" alt="루커스튜디오 대시보드" class="w-full h-full object-cover onerror-fallback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 📌 ===================================================
+         [자바스크립트 영역] 6개 전체 매체의 이벤트를 정밀 제어합니다.
+         =================================================== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // 1) 스크롤 애니메이션 라이브러리 가동
+        AOS.init({
+            once: true,
+            offset: 80,
+            duration: 900,
+        });
+
+        // 2) 6대 핵심 매체 카드와 모달 매핑 딕셔너리 구축 (관리가 편리해집니다)
+        const modalMapping = {
+            'naver-card': 'naver-modal',
+            'insta-card': 'insta-modal',
+            'fb-card': 'fb-modal',
+            'daangn-card': 'daangn-modal',
+            'kakao-card': 'kakao-modal',
+            'data-card': 'data-modal'
+        };
+
+        // 모든 매체 매핑 관계를 돌면서 클릭 이벤트 할당
+        Object.keys(modalMapping).forEach(cardId => {
+            const card = document.getElementById(cardId);
+            const modalId = modalMapping[cardId];
+            const modal = document.getElementById(modalId);
+
+            if (card && modal) {
+                // 카드를 클릭하면 해당 모달을 화면에 띄움
+                card.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 잠금
+                });
+
+                // 모달 닫기 로직 (X버튼 및 반투명 어두운 배경 클릭 시 닫힘)
+                const closeBtn = modal.querySelector('.modal-close-btn');
+                const overlay = modal.querySelector('.modal-close-trigger');
+
+                const closeModal = () => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = ''; // 스크롤 복원
+                };
+
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                if (overlay) overlay.addEventListener('click', closeModal);
+            }
+        });
+
+        // 3) 깃허브 배포 시 이미지 유실(엑박) 현상을 스마트하게 방어해주는 방어 스크립트
+        document.querySelectorAll('.onerror-fallback').forEach(img => {
+            img.onerror = function() {
+                this.style.display = 'none'; // 깨진 아이콘 숨김
+                const parent = this.parentElement;
+                const currentSrc = this.getAttribute('src');
+                // 대신 들어갈 깔끔한 플레이스홀더 레이아웃 삽입
+                parent.innerHTML = `<div class="w-full h-full flex flex-col items-center justify-center text-center p-4 bg-zinc-50 text-zinc-400 text-xs font-normal">
+                    <i class="fa-regular fa-image text-xl mb-1 text-zinc-300"></i>
+                    <span>이미지 업로드 대기 중</span>
+                    <span class="text-[10px] text-zinc-300 mt-0.5">(${currentSrc})</span>
+                </div>`;
+            };
+        });
+    </script>
+</body>
+</html>
