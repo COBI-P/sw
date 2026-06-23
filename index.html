@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COBI | 올인원 바이럴 마케팅 포트폴리오</title>
     
-    <!-- 📌 [오픈그래프] 카카오톡/링크드인 링크 공유 시 나타나는 미리보기 카드 -->
+    <!-- 📌 [오픈그래프] 링크 공유 시 나타나는 미리보기 카드 설정 -->
     <meta property="og:title" content="COBI | 매출을 견인하는 올인원 바이럴 마케터">
     <meta property="og:description" content="네이버, 메타, 당근마켓, 카카오를 아우르는 트렌디한 바이럴 솔루션.">
     <meta property="og:image" content="https://cobi-p.github.io/images/og-image.png">
@@ -108,27 +108,40 @@
         </div>
     </section>
 
-    <!-- 📌 2. 마케팅 철학 (About Me) 섹션 -->
+    <!-- 📌 2. 마케팅 철학 및 프로필 사진 (About Me) 섹션 (🛠️ 구조 전면 개편) -->
     <section id="philosophy" class="py-32 px-6 max-w-7xl mx-auto scroll-mt-20">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
-            <div data-aos="fade-right">
-                <span class="text-xs uppercase tracking-widest text-brand-accent font-black">Core Strength</span>
-                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-brand-primary uppercase mt-3 mb-6">About Me</h2>
-                <div class="w-16 h-[3px] bg-brand-accent"></div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- 📸 [왼쪽] 프로필 사진 구역 (태블릿이상에서 4칸, PC에서 3칸 차지) -->
+            <div class="md:col-span-4 lg:col-span-3 max-w-[280px] mx-auto w-full" data-aos="fade-right">
+                <div class="relative aspect-square rounded-2xl overflow-hidden premium-shadow border border-brand-border bg-zinc-50">
+                    <!-- 💡 깃허브 images 폴더에 "프로필1.png"를 올리시면 엑박이 풀리고 사진이 예쁘게 나타납니다 -->
+                    <img src="images/프로필1.png" alt="이승우 마케터 프로필" class="w-full h-full object-cover onerror-fallback">
+                </div>
             </div>
-            <div class="lg:col-span-2 space-y-8 text-brand-secondary text-base md:text-lg font-normal leading-relaxed" data-aos="fade-left">
-                <p>
-                    안녕하세요, 타겟의 행동 패턴을 분석해 가장 유효한 채널에 메시지를 침투시키는 마케터 <strong class="text-brand-primary font-bold">이승우</strong>입니다. 
-                    단순한 대행사식 기계적 세팅을 넘어, 브랜드의 업종과 위치, 주요 타겟군에 유연하게 대응하는 <span class="text-brand-primary font-bold border-b-2 border-brand-accent/30 pb-0.5">정교한 채널 믹스 전략</span>을 실행합니다.
-                </p>
-                <p>
-                    골목 상권 소상공인을 위한 네이버 플레이스 및 당근마켓 지역 최적화부터, 전국 단위 확산을 위한 인스타그램/페이스북 퍼포먼스 광고 및 카카오 채널 기반의 단골 락인(Lock-in) 마케팅까지 전 과정을 직접 설계하고 지표로 증명해 왔습니다.
-                </p>
+            
+            <!-- ✍️ [오른쪽] 타이틀 및 소개 문구 구역 (태블릿이상에서 8칸, PC에서 9칸 차지) -->
+            <div class="md:col-span-8 lg:col-span-9 space-y-6" data-aos="fade-left">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-brand-accent font-black">Core Strength</span>
+                    <h2 class="text-3xl md:text-5xl font-black tracking-tight text-brand-primary uppercase mt-2 mb-4">About Me</h2>
+                    <div class="w-16 h-[3px] bg-brand-accent"></div>
+                </div>
+                <div class="text-brand-secondary text-base md:text-lg font-normal leading-relaxed space-y-4">
+                    <p>
+                        안녕하세요, 타겟의 행동 패턴을 분석해 가장 유효한 채널에 메시지를 침투시키는 마케터 <strong class="text-brand-primary font-bold">이승우</strong>입니다. 
+                        단순한 대행사식 기계적 세팅을 넘어, 브랜드의 업종과 위치, 주요 타겟군에 유연하게 대응하는 <span class="text-brand-primary font-bold border-b-2 border-brand-accent/30 pb-0.5">정교한 채널 믹스 전략</span>을 실행합니다.
+                    </p>
+                    <p>
+                        골목 상권 소상공인을 위한 네이버 플레이스 및 당근마켓 지역 최적화부터, 전국 단위 확산을 위한 인스타그램/페이스북 퍼포먼스 광고 및 카카오 채널 기반의 단골 락인(Lock-in) 마케팅까지 전 과정을 직접 설계하고 지표로 증명해 왔습니다.
+                    </p>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- 📌 3. 핵심 운영 매체 (Core Channels) 구역 (6개 전체 모달 연동 완료) -->
+    <!-- 📌 3. 핵심 운영 매체 (Core Channels) 구역 -->
     <section id="channels" class="py-32 bg-white border-y border-brand-border px-6 scroll-mt-20">
         <div class="max-w-7xl mx-auto">
             <div class="mb-24 text-center" data-aos="fade-up">
@@ -138,8 +151,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- 📌 [카드 1] 네이버 비즈니스 팩 -->
+                <!-- [카드 1] 네이버 비즈니스 팩 -->
                 <div id="naver-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center text-lg mb-6 font-black">N</div>
@@ -155,7 +167,7 @@
                     </div>
                 </div>
 
-                <!-- 📌 [카드 2] 인스타그램 마케팅 -->
+                <!-- [카드 2] 인스타그램 마케팅 -->
                 <div id="insta-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center text-lg mb-6"><i class="fa-brands fa-instagram"></i></div>
@@ -171,7 +183,7 @@
                     </div>
                 </div>
 
-                <!-- 📌 [카드 3] 페이스북 퍼포먼스 -->
+                <!-- [카드 3] 페이스북 퍼포먼스 -->
                 <div id="fb-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-6"><i class="fa-brands fa-facebook-f"></i></div>
@@ -187,7 +199,7 @@
                     </div>
                 </div>
 
-                <!-- 📌 [카드 4] 당근마켓 하이퍼로컬 -->
+                <!-- [카드 4] 당근마켓 하이퍼로컬 -->
                 <div id="daangn-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="400">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-carrot"></i></div>
@@ -203,7 +215,7 @@
                     </div>
                 </div>
 
-                <!-- 📌 [카드 5] 카카오 비즈니스 CRM -->
+                <!-- [카드 5] 카카오 비즈니스 CRM -->
                 <div id="kakao-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="500">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-comment"></i></div>
@@ -219,7 +231,7 @@
                     </div>
                 </div>
 
-                <!-- 📌 [카드 6] 성과 데이터 통합 관리 -->
+                <!-- [카드 6] 성과 데이터 통합 관리 -->
                 <div id="data-card" class="bg-brand-card border border-brand-border p-8 rounded-2xl transition-all duration-300 premium-shadow premium-shadow-hover cursor-pointer flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="600">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-purple-50 text-brand-purple flex items-center justify-center text-lg mb-6"><i class="fa-solid fa-chart-pie"></i></div>
@@ -234,7 +246,6 @@
                         상세 성과 보기 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -310,12 +321,11 @@
         </div>
     </section>
 
-
     <!-- 📌 ===================================================
          [모달 레이어 집합] 평소에는 hidden 상태로 대기합니다.
          =================================================== -->
 
-    <!-- 📌 1. 네이버 비즈니스 팩 모달 -->
+    <!-- 네이버 비즈니스 팩 모달 -->
     <div id="naver-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -340,7 +350,7 @@
         </div>
     </div>
 
-    <!-- 📌 2. 인스타그램 마케팅 모달 -->
+    <!-- 인스타그램 마케팅 모달 -->
     <div id="insta-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -365,7 +375,7 @@
         </div>
     </div>
 
-    <!-- 📌 3. 페이스북 광고 퍼포먼스 모달 -->
+    <!-- 페이스북 광고 퍼포먼스 모달 -->
     <div id="fb-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -390,7 +400,7 @@
         </div>
     </div>
 
-    <!-- 📌 4. 당근마켓 하이퍼로컬 모달 -->
+    <!-- 당근마켓 하이퍼로컬 모달 -->
     <div id="daangn-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -415,7 +425,7 @@
         </div>
     </div>
 
-    <!-- 📌 5. 카카오 비즈니스 CRM 모달 -->
+    <!-- 카카오 비즈니스 CRM 모달 -->
     <div id="kakao-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -433,14 +443,14 @@
                     <h5 class="text-xs font-bold text-brand-primary uppercase tracking-wider">카카오 모먼트 및 채널 센터 리포트</h5>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/kakao-channel-dashboard.png" alt="카카오 비즈니스 채널" class="w-full h-full object-cover onerror-fallback"></div>
-                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/kakao-moment-ads.png" alt="카카오 모먼트 광고" class="w-full h-full h-full object-cover onerror-fallback"></div>
+                        <div class="relative rounded-xl border border-brand-border overflow-hidden bg-zinc-50 aspect-video"><img src="images/kakao-moment-ads.png" alt="카카오 모먼트 광고" class="w-full h-full object-cover onerror-fallback"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 📌 6. 성과 데이터 통합 관리 모달 -->
+    <!-- 성과 데이터 통합 관리 모달 -->
     <div id="data-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
         <div class="absolute inset-0 bg-brand-primary/30 backdrop-blur-md modal-close-trigger"></div>
         <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[85vh] overflow-y-auto relative z-10 premium-shadow border border-brand-border flex flex-col">
@@ -465,20 +475,15 @@
         </div>
     </div>
 
-
-    <!-- 📌 ===================================================
-         [자바스크립트 영역] 6개 전체 매체의 이벤트를 정밀 제어합니다.
-         =================================================== -->
+    <!-- 📌 [스크립트] 기능 활성화 제어 -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // 1) 스크롤 애니메이션 라이브러리 가동
         AOS.init({
             once: true,
             offset: 80,
             duration: 900,
         });
 
-        // 2) 6대 핵심 매체 카드와 모달 매핑 딕셔너리 구축 (관리가 편리해집니다)
         const modalMapping = {
             'naver-card': 'naver-modal',
             'insta-card': 'insta-modal',
@@ -488,26 +493,24 @@
             'data-card': 'data-modal'
         };
 
-        // 모든 매체 매핑 관계를 돌면서 클릭 이벤트 할당
         Object.keys(modalMapping).forEach(cardId => {
             const card = document.getElementById(cardId);
             const modalId = modalMapping[cardId];
             const modal = document.getElementById(modalId);
 
             if (card && modal) {
-                // 카드를 클릭하면 해당 모달을 화면에 띄움
                 card.addEventListener('click', () => {
+                    modal.remove.classList = 'hidden'; // 에러 수정용 로직 제외 표준 기동
                     modal.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 잠금
+                    document.body.style.overflow = 'hidden';
                 });
 
-                // 모달 닫기 로직 (X버튼 및 반투명 어두운 배경 클릭 시 닫힘)
                 const closeBtn = modal.querySelector('.modal-close-btn');
                 const overlay = modal.querySelector('.modal-close-trigger');
 
                 const closeModal = () => {
                     modal.classList.add('hidden');
-                    document.body.style.overflow = ''; // 스크롤 복원
+                    document.body.style.overflow = '';
                 };
 
                 if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -515,13 +518,11 @@
             }
         });
 
-        // 3) 깃허브 배포 시 이미지 유실(엑박) 현상을 스마트하게 방어해주는 방어 스크립트
         document.querySelectorAll('.onerror-fallback').forEach(img => {
             img.onerror = function() {
-                this.style.display = 'none'; // 깨진 아이콘 숨김
+                this.style.display = 'none';
                 const parent = this.parentElement;
                 const currentSrc = this.getAttribute('src');
-                // 대신 들어갈 깔끔한 플레이스홀더 레이아웃 삽입
                 parent.innerHTML = `<div class="w-full h-full flex flex-col items-center justify-center text-center p-4 bg-zinc-50 text-zinc-400 text-xs font-normal">
                     <i class="fa-regular fa-image text-xl mb-1 text-zinc-300"></i>
                     <span>이미지 업로드 대기 중</span>
